@@ -1,0 +1,41 @@
+### Kafka Quick Start Commands (already dawnloaded apache kafka in local system follow below steps directly)
+
+#### 1. Start Zookeeper:
+```bash
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+```
+
+#### 2. Start Kafka Broker:
+```bash
+bin\windows\kafka-server-start.bat config\server.properties
+```
+
+#### 3. Verify Kafka is Running:
+```bash
+bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+```
+
+#### 4. Create a Topic (if needed):
+```bash
+bin\windows\kafka-topics.bat --create --topic location-update-topic-from-beginning-b --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+```
+
+#### 5. Send Messages (Producer):
+```bash
+bin\windows\kafka-console-producer.bat --topic location-update-topic-from-beginning-b --bootstrap-server localhost:9092
+```
+- Type a message and press **Enter** after each one.
+- Press **Ctrl + C** to exit.
+
+#### 6. Read Messages (Consumer):
+```bash
+bin\windows\kafka-console-consumer.bat --topic location-update-topic-from-beginning-b --from-beginning --bootstrap-server localhost:9092
+```
+
+#### 7. Troubleshooting:
+- If the consumer shows `LEADER_NOT_AVAILABLE`, ensure the topic is created and Kafka broker is running.
+- Restart Zookeeper and Kafka if needed.
+- Verify the topic with the `--list` command.
+
+These commands help manage Kafka topics, produce messages, and consume them quickly. Let me know if you want to add anything or dive into more details!
+
