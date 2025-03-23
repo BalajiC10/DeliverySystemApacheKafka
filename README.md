@@ -1,6 +1,6 @@
 # DeliverySystemApacheKafka
 
-# Spring Boot Demo Projects: Delivery Boy & End User
+# Spring Boot Projects: Delivery Boy & End User
 
 This repository contains two Spring Boot projects simulating a delivery system with two roles:
 - **Delivery Boy**: Handles delivery updates.
