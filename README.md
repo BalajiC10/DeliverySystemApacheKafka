@@ -29,13 +29,6 @@ cd end-user
 - Right-click each project > Run As > Spring Boot App.
 - Ensure both projects run on different ports.
 
-## API Endpoints
-### Delivery Boy
-- `POST /delivery/update` - Send delivery status updates.
-
-### End User
-- `GET /delivery/status` - Fetch the latest delivery status.
-
 ## Tech Stack
 - Java
 - Spring Boot
